@@ -2,11 +2,10 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Water : MonoBehaviour
+public class Casting : MonoBehaviour
 {
   [SerializeField] private bool detectingPlayer;
-   [SerializeField] private ink waterValue
-   
+   [SerializeField] private ink porcentage; //porcentagem de chance de pescar um peixe a cada tentativa   
    private PlayerItems player;
 
    // Start is called before the furst frame update
@@ -20,11 +19,11 @@ public class Water : MonoBehaviour
    {
 		if(detectingPlayer && Imput.GetKeyDown(KeyCode.E))
 		{
-			Player.WaterLimit(waterValue);
+			
 		}
 	}	
 
-	void Oncoasting
+	public void Oncasting
 	{
 		int randowValue = Random.Range(1, 100);
 
